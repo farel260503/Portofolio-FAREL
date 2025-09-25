@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #f9fafc;
+  color: #333;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Smooth transition for all */
+body, nav, section, footer, .about, .skills, .education, .projects, .contact, .skill, .project {
+  transition: background 0.5s ease, color 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #1a73e8, #0c47a1);
+  color: white;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: white;
+  color: #1a73e8;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #f1f1f1;
+  transform: scale(1.05);
+}
+
+/* Navbar */
+nav {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: #1a73e8;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #0c47a1;
+}
+
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+  background: none;
+  border: 2px solid #1a73e8;
+  color: #1a73e8;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#darkModeToggle:hover {
+  background: #1a73e8;
+  color: white;
+}
+
+/* Section */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section h2 {
+  margin-bottom: 25px;
+  color: #1a73e8;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #1a73e8;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* Card Section */
+.about, .skills, .education, .projects, .contact {
+  background: white;
+  margin-bottom: 40px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.skill {
+  background: #1a73e8;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  background: #0c47a1;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project {
+  background: #fefefe;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+  margin-bottom: 12px;
+  color: #0c47a1;
+}
+
+/* Footer */
+footer {
+  background: #0c47a1;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode nav {
+  background: #1e1e1e;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+}
+
+body.dark-mode nav a {
+  color: #90caf9;
+}
+
+body.dark-mode nav a:hover {
+  color: #42a5f5;
+}
+
+body.dark-mode .about,
+body.dark-mode .skills,
+body.dark-mode .education,
+body.dark-mode .projects,
+body.dark-mode .contact {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  color: #e0e0e0;
+}
+
+body.dark-mode .skill {
+  background: #42a5f5;
+  color: #fff;
+}
+
+body.dark-mode .skill:hover {
+  background: #1e88e5;
+}
+
+body.dark-mode .project {
+  background: #1e1e1e;
+  border: 1px solid #333;
+}
+
+body.dark-mode footer {
+  background: #0d47a1;
+}
